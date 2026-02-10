@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact - David Townsend III</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 1.8;
+      max-width: 600px; 
+      margin: 50px auto; 
+      padding: 20px;
+    }
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      border-bottom: 2px solid #000;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+      color: navy;
+    }
+    input, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: navy;
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    button:hover {
+      background-color: #000050;
+    }
+  </style>
+</head>
+<body>
+
+  <nav style="text-align: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+    <a href="index.html" style="margin: 0 10px; text-decoration: none; color: #777;">Home</a>
+    <a href="resume.html" style="margin: 0 10px; text-decoration: none; color: #777;">Resume</a>
+    <a href="contact.html" style="margin: 0 10px; text-decoration: none; color: navy; font-weight: bold;">Contact</a>
+  </nav>
+
+  <h1>Contact Me</h1>
+  <p>Have a question or want to discuss a project? Fill out the form below, please and thank you.</p>
+
+  <form action="https://formsubmit.co/dtownsend@hcc-nd.edu" method="POST">
+    
+    <input type="hidden" name="_subject" value="New Contact Form Submission!">
+
+    <input type="hidden" name="_captcha" value="false">
+
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" required placeholder="Your Full Name">
+
+    <label for="email">Email Address</label>
+    <input type="email" name="email" id="email" required placeholder="your@email.com">
+
+    <label for="content">Message</label>
+    <textarea name="content" id="content" rows="5" required placeholder="How can I help you?"></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+</body>
+</html>

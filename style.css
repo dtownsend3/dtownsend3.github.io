@@ -1,0 +1,138 @@
+/* 
+Description: Global stylesheet for consistent branding using HCC Maroon and Gray.
+*/
+
+/* Global Page Styles */
+body {
+    background-color: #949ca6; /* Holy Cross Gray */
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    max-width: 700px; 
+    margin: 50px auto; 
+    padding: 20px;
+}
+
+/* Navigation Styles */
+nav {
+    text-align: center; 
+    margin-bottom: 30px; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 10px;
+}
+
+nav a {
+    margin: 0 10px; 
+    text-decoration: none; 
+    color: #444;
+}
+
+nav a.active {
+    color: navy;
+    font-weight: bold;
+}
+
+/* Typography & Headers */
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 0;
+}
+
+h3 {
+    color: navy;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* Semantic Emphasis Styling */
+em {
+    color: #601c2e;    /* Holy Cross Maroon */
+    font-style: normal; /* Removes italics to use color for emphasis instead */
+}
+
+/* Retain italics for explicit italic tags (e.g., book titles) */
+i {
+    font-style: italic;
+}
+
+/* Formatting Elements */
+blockquote {
+    font-style: italic;
+    color: #444;
+    border-left: 3px solid #601c2e;
+    padding-left: 15px;
+}
+
+strong { 
+    color: navy; 
+}
+
+/* Table Styles (for Resume) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    vertical-align: top;
+    text-align: left;
+}
+
+th { 
+    background-color: rgba(255, 255, 255, 0.3); 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+}
+
+/* Form Styles (for Contact) */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: navy;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: navy;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Media Elements (for Gallery) */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}

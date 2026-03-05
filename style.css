@@ -1,20 +1,20 @@
-/* Normalizes the layout by ensuring padding and borders are included in element widths */
+/* Resets margins and padding so the layout is consistent across browsers */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Sets a professional blue-gray background to provide high contrast for the content cards */
+/* Sets the main background color and default text style */
 body {
     background-color: #6a798d; 
-    color: #2d394b;
+    color: #334155;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     padding: 40px 20px;
 }
 
-/* Formats main content areas as elevated "cards" using shadows and consistent inner spacing */
+/* Creates the white "card" look for the main content areas */
 article, header, main, section {
     max-width: 850px;
     margin: 0 auto 30px auto;
@@ -22,57 +22,116 @@ article, header, main, section {
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
-    border-left: 6px solid #1e3a8a; /* Adds a professional navy blue brand stripe to the left edge */
+    border-left: 6px solid #1e3a8a; 
 }
 
-/* Centers navigation links and removes distracting background colors */
-nav {
-    text-align: center;
-    margin-bottom: 40px;
-    background: none;
-}
+/* --- CONTACT FORM --- */
 
-/* Styles links with a bold navy color and adds a smooth transition effect for interactivity */
-nav a {
-    text-decoration: none;
-    color: #1e3a8a; 
-    margin: 0 15px;
+/* Stacks labels on top of inputs so the form flows vertically */
+label {
+    display: block;
+    margin-top: 15px;
     font-weight: 700;
-    transition: all 0.3s ease;
+    color: #1e3a8a;
+    text-transform: uppercase;
+    font-size: 0.85rem;
 }
 
-/* Provides visual feedback by highlighting the active page or the link being hovered over */
-nav a:hover, .active {
-    color: #3b82f6;
-    border-bottom: 2px solid #3b82f6;
-}
-
-/* Standardizes the size of all media elements (images, video, map) for a uniform gallery grid */
-img, video, iframe {
+/* Makes text boxes fill the width of the card and adds spacing */
+input, textarea {
+    display: block;
     width: 100%;
-    max-width: 600px; /* Prevents media from becoming too large on wide screens */
-    height: 350px;    /* Maintains a consistent height across different media types */
-    object-fit: cover; /* Ensures content fills the area without being stretched or distorted */
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-family: inherit;
+}
+
+/* Styles the submit button with a navy color and hover effect */
+button {
+    display: block;
+    background: #1e3a8a;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #3b82f6;
+}
+
+/* --- GALLERY MEDIA --- */
+
+/* Forces videos and maps into a consistent rectangular shape */
+video, iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    object-fit: cover; 
     display: block;
     margin: 20px auto;
     border-radius: 8px;
     border: 3px solid #cbd5e1;
 }
 
-/* Enhances typography by adjusting the size and weight of main headings */
+/* Ensures images show the full picture without being cropped or stretched */
+img {
+    width: 100%;
+    max-width: 450px; 
+    height: auto;     
+    object-fit: contain; 
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    border: 3px solid #cbd5e1;
+}
+
+/* --- TYPOGRAPHY & TABLES --- */
+
 h1 {
     font-size: 2.5rem;
     color: #0f172a;
     letter-spacing: -1px;
 }
 
-/* Makes bold text stand out by using a high-contrast navy color instead of standard black */
+/* Changes bold text to navy blue to make it pop */
 strong {
     color: #1e3a8a;
     font-weight: 800;
 }
 
-/* Applies a stylistic drop-cap to the first letter of paragraphs to mimic a magazine layout */
+/* Styles the resume table with visible lines and navy headers */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 2px solid #1e3a8a;
+}
+
+th {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+}
+
+/* Adds a light gray tint to every other row for easier reading */
+tr:nth-child(even) td {
+    background-color: #f1f5f9;
+}
+
+/* Creates a large first letter at the start of the essay */
 article p::first-letter {
     font-size: 2.5rem;
     font-weight: bold;
@@ -82,35 +141,7 @@ article p::first-letter {
     line-height: 1;
 }
 
-/* Improves the visibility of the resume table with dark headers and defined borders */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    border: 2px solid #1e3a8a;
-}
-
-/* Sets a bold navy background for table headers to anchor the data sections */
-th {
-    background-color: #152960;
-    color: white;
-    padding: 12px;
-    text-align: left;
-}
-
-/* Ensures individual table cells have visible grid lines against the white background */
-td {
-    padding: 12px;
-    border: 1px solid #cbd5e1;
-    background-color: #ffffff;
-}
-
-/* Implements "zebra-striping" on table rows to make long lists easier to read */
-tr:nth-child(even) td {
-    background-color: #f1f5f9;
-}
-
-/* Highlights the personal reflection section with a unique dashed border and light background */
+/* Unique styling for the personal connection box at the bottom */
 #personal-connection {
     background-color: #f8fafc;
     border: 2px dashed #3b82f6;
@@ -118,25 +149,9 @@ tr:nth-child(even) td {
     margin-top: 30px;
 }
 
-/* Ensures containers expand properly to contain any elements that have been floated */
+/* Keeps the layout from breaking when using floated elements like the drop-cap */
 section::after {
     content: "";
     display: table;
     clear: both;
-}
-
-/* Styles buttons to match the professional navy theme with clear hover interactions */
-button {
-    background: #1e3a8a;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Changes the button color to a lighter blue when the user hovers over it */
-button:hover {
-    background: #3b82f6;
 }

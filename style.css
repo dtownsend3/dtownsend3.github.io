@@ -25,6 +25,28 @@ article, header, main, section {
     border-left: 6px solid #1e3a8a; 
 }
 
+/* --- NAVIGATION STYLING --- */
+
+/* Centers the navigation links on the page */
+nav {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Styles the links to be gray and removes the underline */
+nav a {
+    text-decoration: none;
+    color: #444; 
+    margin: 0 15px;
+    font-weight: 700;
+}
+
+/* Highlights the active page with navy blue and an underline */
+nav a.active {
+    color: #1e3a8a;
+    border-bottom: 2px solid #1e3a8a;
+}
+
 /* --- CONTACT FORM --- */
 
 /* Stacks labels on top of inputs so the form flows vertically */

@@ -1,179 +1,142 @@
-/* Sets the foundation for the layout and ensures consistent spacing */
+/* Normalizes the layout by ensuring padding and borders are included in element widths */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Defines the background color and global font settings */
+/* Sets a professional blue-gray background to provide high contrast for the content cards */
 body {
-    background-color: #e2e8f0; 
-    color: #1e293b;
+    background-color: #6a798d; 
+    color: #2d394b;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     padding: 40px 20px;
 }
 
-/* Creates a clean, centered container for the content to sit on */
-article, header, .container {
+/* Formats main content areas as elevated "cards" using shadows and consistent inner spacing */
+article, header, main, section {
     max-width: 850px;
     margin: 0 auto 30px auto;
     background: #ffffff; 
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
-    border-left: 5px solid #4f46e5; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+    border-left: 6px solid #1e3a8a; /* Adds a professional navy blue brand stripe to the left edge */
 }
 
-/* Centers the menu and sets up the link styling */
+/* Centers navigation links and removes distracting background colors */
 nav {
     text-align: center;
     margin-bottom: 40px;
+    background: none;
 }
 
+/* Styles links with a bold navy color and adds a smooth transition effect for interactivity */
 nav a {
     text-decoration: none;
-    color: #64748b;
+    color: #1e3a8a; 
     margin: 0 15px;
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: 700;
     transition: all 0.3s ease;
 }
 
-/* Highlighting the link the user is currently hovering over */
-nav a:hover {
-    color: #4f46e5; 
+/* Provides visual feedback by highlighting the active page or the link being hovered over */
+nav a:hover, .active {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
 }
 
-/* Styles the link for the page the user is currently on */
-.active {
-    color: #4f46e5;
-    border-bottom: 2px solid #4f46e5;
-    padding-bottom: 4px;
+/* Standardizes the size of all media elements (images, video, map) for a uniform gallery grid */
+img, video, iframe {
+    width: 100%;
+    max-width: 600px; /* Prevents media from becoming too large on wide screens */
+    height: 350px;    /* Maintains a consistent height across different media types */
+    object-fit: cover; /* Ensures content fills the area without being stretched or distorted */
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    border: 3px solid #cbd5e1;
 }
 
-/* Specifically targets email links to give them a unique look */
-a[href^="mailto:"] {
-    color: #4f46e5;
-    font-weight: bold;
-    text-decoration: none;
+/* Enhances typography by adjusting the size and weight of main headings */
+h1 {
+    font-size: 2.5rem;
+    color: #0f172a;
+    letter-spacing: -1px;
 }
 
-/* Adds a stylized drop-cap to the start of the article */
+/* Makes bold text stand out by using a high-contrast navy color instead of standard black */
+strong {
+    color: #1e3a8a;
+    font-weight: 800;
+}
+
+/* Applies a stylistic drop-cap to the first letter of paragraphs to mimic a magazine layout */
 article p::first-letter {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #1e3a8a;
     float: left;
-    margin-right: 8px;
+    margin-right: 10px;
     line-height: 1;
 }
 
-/* Ensures consistent vertical spacing between paragraphs */
-p + p {
-    margin-top: 20px;
+/* Improves the visibility of the resume table with dark headers and defined borders */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 2px solid #1e3a8a;
 }
 
-/* Handles image alignment so text wraps around photos */
-section img {
-    float: right;
-    width: 250px;
-    margin-left: 20px;
-    border-radius: 8px;
+/* Sets a bold navy background for table headers to anchor the data sections */
+th {
+    background-color: #152960;
+    color: white;
+    padding: 12px;
+    text-align: left;
 }
 
-/* Prevents layout collapse when using floated elements */
+/* Ensures individual table cells have visible grid lines against the white background */
+td {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+}
+
+/* Implements "zebra-striping" on table rows to make long lists easier to read */
+tr:nth-child(even) td {
+    background-color: #f1f5f9;
+}
+
+/* Highlights the personal reflection section with a unique dashed border and light background */
+#personal-connection {
+    background-color: #f8fafc;
+    border: 2px dashed #3b82f6;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+/* Ensures containers expand properly to contain any elements that have been floated */
 section::after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Main heading styles */
-h1 {
-    font-size: 2.2rem;
-    color: #1e293b;
-    letter-spacing: -1px;
-    margin-bottom: 10px;
-}
-
-/* Subheading styles */
-h2 {
-    color: #64748b;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
-/* Section headers for a structured look */
-h3 {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #4f46e5;
-    font-size: 1rem;
-    margin-top: 30px;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 8px;
-}
-
-/* Stylized blockquotes for important excerpts */
-blockquote {
-    margin: 30px 0;
-    padding: 20px;
-    background: #f8fafc;
-    border-radius: 0 10px 10px 0;
-    border-left: 4px solid #4f46e5;
-    font-style: italic;
-    text-align: center;
-}
-
-/* Simplifies the table layout for a professional data view */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-th {
-    text-align: left;
-    background-color: #f1f5f9;
-    padding: 12px;
-    font-size: 0.8rem;
-}
-
-td {
-    padding: 15px;
-    border-bottom: 1px solid #f1f5f9;
-}
-
-/* Modern input styling for the contact form */
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #e2e8f0;
-    border-radius: 6px;
-    margin-top: 8px;
-    transition: border-color 0.3s;
-}
-
-/* Highlights the text field when the user clicks inside it */
-input:focus {
-    border-color: #4f46e5;
-    outline: none;
-}
-
-/* Professional button styling with hover state */
+/* Styles buttons to match the professional navy theme with clear hover interactions */
 button {
-    background: #4f46e5;
+    background: #1e3a8a;
     color: white;
     padding: 12px 24px;
     border: none;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 20px;
 }
 
+/* Changes the button color to a lighter blue when the user hovers over it */
 button:hover {
-    background: #3730a3;
+    background: #3b82f6;
 }

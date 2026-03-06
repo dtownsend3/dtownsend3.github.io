@@ -93,9 +93,9 @@ button:hover {
 /* Specific rule for the Gallery page title only */
 .gallery-title {
     text-align: center; 
-    margin-top: 20px;   
-    margin-bottom: 10px; 
-    color: #0f172a;     
+    width: 100%;        
+    margin: 20px 0;     
+    display: block;     
 }
 
 /* Forces videos and maps into a consistent rectangular shape */

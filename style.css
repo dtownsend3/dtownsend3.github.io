@@ -90,6 +90,14 @@ button:hover {
 
 /* --- GALLERY MEDIA --- */
 
+/* Specific rule for the Gallery page title only */
+.gallery-title {
+    text-align: center; 
+    margin-top: 20px;   
+    margin-bottom: 10px; 
+    color: #0f172a;     
+}
+
 /* Forces videos and maps into a consistent rectangular shape */
 video, iframe {
     width: 100%;

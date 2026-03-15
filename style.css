@@ -113,13 +113,6 @@ button:hover {
 
 /* --- GALLERY MEDIA --- */
 
-.gallery-title {
-    text-align: center; 
-    width: 100%;         
-    margin: 20px 0;     
-    display: block;     
-}
-
 video, iframe {
     width: 100%;
     max-width: 600px;

@@ -5,13 +5,20 @@
     padding: 0;
 }
 
-/* Sets the main background color and default text style */
+/* Added a Linear Gradient background */
 body {
-    background-color: #6a798d; 
+    background: linear-gradient(135deg, #6a798d, #334155); 
     color: #334155;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* Added Keyframes for a smooth fade-in animation */
+@keyframes fadeInContent {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Creates the white "card" look for the main content areas */
@@ -21,56 +28,72 @@ article, header, main, section {
     background: #ffffff; 
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+    /* Enhanced Box Shadow for more depth */
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.25); 
     border-left: 6px solid #1e3a8a; 
+    /* Applying animation */
+    animation: fadeInContent 1.2s ease-out;
 }
 
 /* --- NAVIGATION STYLING --- */
 
-/* Centers the navigation links on the page */
 nav {
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* Styles the links to be gray and removes the underline */
 nav a {
     text-decoration: none;
-    color: #444; 
+    color: #ffffff; /* Changed to white to pop against gradient background */
     margin: 0 15px;
     font-weight: 700;
 }
 
-/* Highlights the active page with navy blue and an underline */
 nav a.active {
     color: #1e3a8a;
-    border-bottom: 2px solid #1e3a8a;
+    background: white;
+    padding: 5px 12px;
+    border-radius: 4px;
 }
 
 /* --- CONTACT FORM --- */
 
-/* Stacks labels on top of inputs so the form flows vertically */
+/*Form field labels aligned for better usability */
 label {
-    display: block;
-    margin-top: 15px;
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    margin-right: 15px;
     font-weight: 700;
     color: #1e3a8a;
     text-transform: uppercase;
     font-size: 0.85rem;
 }
 
-/* Makes text boxes fill the width of the card and adds spacing */
+/* Enhanced text boxes with transition effect */
 input, textarea {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: calc(100% - 145px); /* Ensures input fits next to label */
     padding: 12px;
     border: 2px solid #cbd5e1;
     border-radius: 6px;
     margin-top: 5px;
     font-family: inherit;
+    transition: all 0.3s ease;
 }
 
-/* Styles the submit button with a navy color and hover effect */
+/* Focus state for better UX */
+input:focus, textarea:focus {
+    background-color: #f0f9ff;
+    border-color: #3b82f6;
+    outline: none;
+}
+
+/* Invalid state for form validation feedback */
+input:invalid {
+    border-color: #ef4444;
+}
+
 button {
     display: block;
     background: #1e3a8a;
@@ -79,26 +102,24 @@ button {
     border: none;
     border-radius: 6px;
     font-weight: bold;
-    cursor: pointer;
-    margin-top: 20px;
+    cursor: pointer; /* Visual cue that it's clickable */
+    margin: 20px auto 0 auto;
     transition: background 0.3s;
 }
 
 button:hover {
-    background: #3b82f6;
+    background: #07d; /* Darker blue from textbook example */
 }
 
 /* --- GALLERY MEDIA --- */
 
-/* Specific rule for the Gallery page title only */
 .gallery-title {
     text-align: center; 
-    width: 100%;        
+    width: 100%;         
     margin: 20px 0;     
     display: block;     
 }
 
-/* Forces videos and maps into a consistent rectangular shape */
 video, iframe {
     width: 100%;
     max-width: 600px;
@@ -110,7 +131,6 @@ video, iframe {
     border: 3px solid #cbd5e1;
 }
 
-/* Ensures images show the full picture without being cropped or stretched */
 img {
     width: 100%;
     max-width: 450px; 
@@ -128,15 +148,15 @@ h1 {
     font-size: 2.5rem;
     color: #0f172a;
     letter-spacing: -1px;
+    /* Added Text Shadow */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
 }
 
-/* Changes bold text to navy blue to make it pop */
 strong {
     color: #1e3a8a;
     font-weight: 800;
 }
 
-/* Styles the resume table with visible lines and navy headers */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -156,12 +176,10 @@ td {
     border: 1px solid #cbd5e1;
 }
 
-/* Adds a light gray tint to every other row for easier reading */
 tr:nth-child(even) td {
     background-color: #f1f5f9;
 }
 
-/* Creates a large first letter at the start of the essay */
 article p::first-letter {
     font-size: 2.5rem;
     font-weight: bold;
@@ -171,7 +189,6 @@ article p::first-letter {
     line-height: 1;
 }
 
-/* Unique styling for the personal connection box at the bottom */
 #personal-connection {
     background-color: #f8fafc;
     border: 2px dashed #3b82f6;
@@ -179,7 +196,6 @@ article p::first-letter {
     margin-top: 30px;
 }
 
-/* Keeps the layout from breaking when using floated elements like the drop-cap */
 section::after {
     content: "";
     display: table;

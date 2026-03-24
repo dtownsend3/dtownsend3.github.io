@@ -1,5 +1,5 @@
 /**
- * THE CARD TOWER: A Game by Zero.
+ * THE CARD TOWER: A Game by David Townsend III.
  * ---------------------------------------------------------
  * A digital forensic mystery where the dealer is a mirror.
  * * Technical Specification:

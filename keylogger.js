@@ -1,6 +1,6 @@
 /**
  * @file keylogger.js
- * @description Tracks keystrokes to trigger the "SCENT".
+ * @description Tracks keystrokes to trigger the "s.c.e.n.t".
  * This script uses a for-in loop to audit character frequency.
  */
 

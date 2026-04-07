@@ -1,45 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Gallery - The Essence of Cologne</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Gallery - The Essence of Cologne</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="collapsiblesections.js" defer></script>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="gallery.html" class="active">Gallery</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
-    <a href="sandbox.html">Sandbox</a>
-  </nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="sandbox.html">Sandbox</a>
+    </nav>
 
-  <h1 class="center-title">Gallery</h1>
+    <h1 class="center-title">Gallery</h1>
 
-  <section>
-    <h2>Academic Milestone</h2>
-    <p>A personal memory of being recognized on the Dean's List at Holy Cross College.</p>
-    <img src="Me.png" alt="David Townsend III holding a Dean's List certificate">
-  </section>
+    <section class="collapsible">
+        <div class="section-header">
+            <h2>Academic Milestone</h2>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="content hidden">
+            <p>A personal memory of being recognized on the Dean's List at Holy Cross College.</p>
+            <img src="Me.png" alt="David Townsend III holding a Dean's List certificate">
+        </div>
+    </section>
 
-  <section>
-    <h2>Induction Ceremony</h2>
-    <p>A significant moment from the Upsilon Pi Epsilon induction ceremony, representing dedication to the field of computing and information disciplines.</p>
-    <video controls>
-      <source src="UpsilonPiEpsilon.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
+    <section class="collapsible">
+        <div class="section-header">
+            <h2>Induction Ceremony</h2>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="content hidden">
+            <p>A significant moment from the Upsilon Pi Epsilon induction ceremony, representing dedication to the field of computing and information disciplines.</p>
+            <video controls>
+                <source src="UpsilonPiEpsilon.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
 
-  <section>
-    <h2>Future Aspirations</h2>
-    <p>The University of Notre Dame represents my ultimate academic goal and the drive to achieve my highest potential.</p>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.3129532824314!2d-86.2378954234057!3d41.7001608712356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88113293026045d5%3A0x67716982467d5178!2sUniversity%20of%20Notre%20Dame!5e0!3m2!1sen!2sus!4v1700000000000" 
-      allowfullscreen="" loading="lazy">
-    </iframe>
-  </section>
+    <section class="collapsible">
+        <div class="section-header">
+            <h2>Future Aspirations</h2>
+            <button class="toggle-btn">+</button>
+        </div>
+        <div class="content hidden">
+            <p>The University of Notre Dame represents my ultimate academic goal and the drive to achieve my highest potential.</p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.3129532824314!2d-86.2378954234057!3d41.7001608712356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88113293026045d5%3A0x67716982467d5178!2sUniversity%20of%20Notre%20Dame!5e0!3m2!1sen!2sus!4v1700000000000" 
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
 
 </body>
 </html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Art Explorer | AIC API</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="api.js" defer></script>
+    <style>
+        /* This internal style block overrides the 'drop-cap' effect from style.css 
+           specifically for this page to keep functional text readable */
+        article p::first-letter {
+            font-size: inherit !important;
+            font-weight: inherit !important;
+            color: inherit !important;
+            float: none !important;
+            margin-right: 0 !important;
+            line-height: inherit !important;
+        }
+    </style>
+</head>
+<body>
+
+ <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="api.html" class="active">Art Search</a> 
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+    <a href="sandbox.html">Sandbox</a>
+  </nav>
+
+<article>
+  <header>
+    <h1>Art Institute Of Chicago Explorer</h1>
+    <h3>As an art enthusiast, I built this to share the masterpieces that left an impression on me during my time at the museum.</h3>
+    <br>
+    <p><em>Use the dropdown in the search bar to select a featured artist</em></p>
+  </header>
+  
+  <section id="api-interface">
+    <div style="text-align: center; margin-bottom: 20px;">
+        <label for="user-input">SEARCH:</label>
+        
+        <input type="text" id="user-input" list="artist-suggestions" placeholder="Click the arrow to see artists...">
+        
+        <datalist id="artist-suggestions">
+            <option value="Alma Thomas">
+            <option value="Claude Monet">
+            <option value="Georgia O'Keeffe">
+            <option value="Gustave Caillebotte">
+            <option value="Henri Matisse">
+            <option value="Jackson Pollock">
+            <option value="Joan Mitchell">
+            <option value="Katsushika Hokusai">
+            <option value="Marc Chagall">
+            <option value="Pablo Picasso">
+            <option value="Pierre-Auguste Renoir">
+            <option value="Salvador Dalí">
+            <option value="Vincent van Gogh">
+        </datalist>
+
+        <button id="search-btn">Find Artwork</button>
+    </div>
+
+    <div id="results-container"></div>
+
+    <footer style="margin-top: 40px; padding: 20px; border-top: 1px solid #000000; text-align: center; font-size: 0.9rem; color: #64748b;">
+        <p>
+            <strong>Note:</strong> This tool displays a selection of results from the archives. 
+            For the full collection of over 300,000 works, please visit the 
+            <a href="https://www.artic.edu/" target="_blank" style="color: #1e3a8a; font-weight: bold;">Art Institute of Chicago website</a>.
+        </p>
+    </footer>
+  </section>
+
+</article>
+
+</body>
+</html>
